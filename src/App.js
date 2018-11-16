@@ -20,10 +20,6 @@ const App = () => (
   </Borderless>
 );
 
-const Half = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1px 1fr;
-`;
 const Borderless = styled.div`
   border: 0;
   vw: 100;
