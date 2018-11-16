@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { StyledLink } from 'Elements';
 import styled from 'styled-components';
-import 'css/Hamburger.css';
-import { logout } from 'Icons';
+import '../css/Hamburger.css';
+// import { logout } from 'Icons';
 
 const SideNav = styled.div`
   height: 100%;
@@ -80,7 +80,7 @@ export default class Hamburger extends Component {
 
               <StyledLink style={{ color: 'white' }} to="/dashboard">
                 <div>
-                  <Logout src={logout} alt="" />
+                  {/* <Logout src={logout} alt="" /> */}
                   <h1>Logout</h1>
                 </div>
               </StyledLink>
