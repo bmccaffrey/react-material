@@ -1,5 +1,14 @@
+html,
+body {
+  box-sizing: border-box;
+  border: 0;
+}
+
 .App {
-  text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  height: 100vh;
 }
 
 .App-logo {
@@ -19,7 +28,8 @@
 }
 
 .App-link {
-  color: #61dafb;
+  text-decoration: none;
+  color: black;
 }
 
 @keyframes App-logo-spin {
