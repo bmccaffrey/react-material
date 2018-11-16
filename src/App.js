@@ -1,34 +1,35 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import './App.css';
-import { Card } from 'Elements';
+import { AppHeader } from 'Components';
+// import { Card, StyledLink } from 'Elements';
+import { CardPage, HomePage } from 'Pages';
+import styled from 'styled-components';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <Card>
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p>
-          </Card>
-          <br />
-          <Card sharp>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </Card>
-        </header>
+const App = () => (
+  <Borderless>
+    <Router>
+      <div>
+        <AppHeader />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/cards" component={CardPage} />
+        </Switch>
       </div>
-    );
-  }
-}
+    </Router>
+  </Borderless>
+);
+
+const Half = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+`;
+const Borderless = styled.div`
+  border: 0;
+  vw: 100;
+  vh: 100;
+  height: 100%;
+  width: 100%;
+`;
 
 export default App;
